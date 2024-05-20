@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Responsive Landing Page Headphones</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        .nav__logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+        }
+        .nav__menu {
+            display: flex;
+            align-items: center;
+        }
+        .nav__list {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav__item {
+            margin-right: 1.5rem;
+        }
+        .nav__link {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
+        .nav__toggle,
+        .nav__close {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .main {
+            padding-top: 5rem;
+        }
+        .section {
+            padding: 3rem 0;
+        }
+        .home__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .home__data {
+            text-align: center;
+        }
+        .home__header {
+            margin-bottom: 1rem;
+        }
+        .home__title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+        .home__subtitle {
+            font-size: 2rem;
+            color: #555;
+        }
+        .home__footer {
+            margin-top: 1rem;
+        }
+        .button--flex {
+            display: inline-flex;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button__icon {
+            margin-right: 0.5rem;
+        }
+        .section__title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #000;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .products__card {
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+        }
+        .products__img {
+            width: 100%;
+            height: 150px;
+            background-color: #f0f0f0;
+            margin-bottom: 1rem;
+        }
+        .products__title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+        .products__price {
+            font-size: 1rem;
+            color: #555;
+        }
+        .footer {
+            padding: 3rem 0;
+            background-color: #000;
+            color: #fff;
+        }
+        .footer__container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .footer__logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .footer__title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .footer__links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer__link {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer__input {
+            padding: 0.75rem;
+            border: none;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        .footer__social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .footer__copy {
+            text-align: center;
+            margin-top: 2rem;
+            color: #555;
+        }
+        .footer__copy-link {
+            color: #555;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                LOGO
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#specs" class="nav__link">Specs</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#case" class="nav__link">Case</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div style="height: 300px; background-color: #f0f0f0;"></div>
+                <div class="home__data">
+                    <div class="home__header">
+                        <h1 class="home__title">On ear</h1>
+                        <h2 class="home__subtitle">Beats 3</h2>
+                    </div>
+                    <div class="home__footer">
+                        <h3 class="home__title-description">Overview</h3>
+                        <p class="home__description">Enjoy award-winning Beats sound with wireless listening freedom and a sleek, streamlined design with comfortable padded earphones, delivering first-rate playback.</p>
+                        <a href="#" class="button button--flex">
+                            <span>
+                                <i class="ri-shopping-bag-line button__icon"></i> Add to Bag
+                            </span>
+                            <span class="home__price">$299</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== SPONSOR ===============-->
+        <section class="sponsor section" style="background-color: #f9f9f9;">
+            <div class="sponsor__container container grid">
+                <div style="height: 100px; background-color: #d0d0d0;"></div>
+                <div style="height: 100px; background-color: #d0d0d0;"></div>
+                <div style="height: 100px; background-color: #d0d0d0;"></div>
+                <div style="height: 100px; background-color: #d0d0d0;"></div>
+            </div>
+        </section>
+
+        <!--=============== SPECS ===============-->
+        <section class="specs section" id="specs">
+            <h2 class="section__title">Specs</h2>
+            <div class="specs__container container grid">
+                <div class="specs__content grid">
+                    <div class="specs__data">
+                        <i class="ri-bluetooth-line specs__icon"></i>
+                        <h3 class="specs__title">Connection</h3>
+                        <span class="specs__subtitle">Bluetooth v5.2</span>
+                    </div>
+                    <div class="specs__data">
+                        <i class="ri-battery-charge-line specs__icon"></i>
+                        <h3 class="specs__title">Battery</h3>
+                        <span class="specs__subtitle">Duration 40h</span>
+                    </div>
+                    <div class="specs__data">
+                        <i class="ri-plug-line specs__icon"></i>
+                        <h3 class="specs__title">Plug</h3>
+                        <span class="specs__subtitle">Jack 3.5mm</span>
+                    </div>
+                    <div class="specs__data">
+                        <i class="ri-mic-line specs__icon"></i>
+                        <h3 class="specs__title">Microphone</h3>
+                        <span class="specs__subtitle">Supports calls</span>
+                    </div>
+                </div>
+                <div style="height: 150px; background-color: #f0f0f0;"></div>
+            </div>
+        </section>
+
+        <!--=============== CASE ===============-->
+        <section class="case section" id="case">
+            <h2 class="section__title">Case</h2>
+            <div class="case__container container grid">
+                <div style="height: 300px; background-color: #f0f0f0;"></div>
+                <div class="case__content">
+                    <div class="case__data">
+                        <h3 class="case__title">Ultra sleek and stylish</h3>
+                        <p class="case__description">The Beats Studio3 Wireless headphones offer an unmatched listening experience with Pure Adaptive Noise Cancelling (Pure ANC) technology, delivering a premium listening experience with real-time audio calibration.</p>
+                    </div>
+                    <div class="case__data">
+                        <h3 class="case__title">Lightweight and durable</h3>
+                        <p class="case__description">Crafted from high-quality materials, these headphones are designed to be lightweight and durable, providing a comfortable fit for long listening sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== PRODUCTS ===============-->
+        <section class="products section" id="products">
+            <h2 class="section__title">Products</h2>
+            <div class="products__container container grid">
+                <article class="products__card">
+                    <div class="products__img" style="background-color: #e0e0e0;"></div>
+                    <h3 class="products__title">Speaker Beats Pill</h3>
+                    <span class="products__price">$199</span>
+                </article>
+                <article class="products__card">
+                    <div class="products__img" style="background-color: #e0e0e0;"></div>
+                    <h3 class="products__title">Beats Wireless</h3>
+                    <span class="products__price">$299</span>
+                </article>
+                <article class="products__card">
+                    <div class="products__img" style="background-color: #e0e0e0;"></div>
+                    <h3 class="products__title">Beats Solo2</h3>
+                    <span class="products__price">$249</span>
+                </article>
+                <article class="products__card">
+                    <div class="products__img" style="background-color: #e0e0e0;"></div>
+                    <h3 class="products__title">Beats Studio3</h3>
+                    <span class="products__price">$349</span>
+                </article>
+            </div>
+        </section>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div>
+                    <h3 class="footer__logo">Beats</h3>
+                    <p class="footer__description">The best headphones in the market</p>
+                </div>
+                <div>
+                    <h3 class="footer__title">Products</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Speaker Beats Pill</a></li>
+                        <li><a href="#" class="footer__link">Beats Wireless</a></li>
+                        <li><a href="#" class="footer__link">Beats Solo2</a></li>
+                        <li><a href="#" class="footer__link">Beats Studio3</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">Support</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">FAQs</a></li>
+                        <li><a href="#" class="footer__link">Shipping</a></li>
+                        <li><a href="#" class="footer__link">Returns</a></li>
+                        <li><a href="#" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">Subscribe</h3>
+                    <form action="#">
+                        <input type="email" placeholder="Email Address" class="footer__input">
+                        <button class="button button--flex">
+                            <i class="ri-send-plane-fill button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="footer__social-link"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="footer__social-link"><i class="ri-twitter-fill"></i></a>
+            </div>
+            <p class="footer__copy">© 2023 Beats. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
