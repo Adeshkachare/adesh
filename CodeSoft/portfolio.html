@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Your Name</h1>
+            <p>Your Tagline or Brief Introduction</p>
+        </div>
+    </header>
+
+    <section id="about" class="section-3d">
+        <h2>About Me</h2>
+        <img src="your-photo.jpg" alt="Your Name">
+        <p>A short bio highlighting your skills and experience.</p>
+    </section>
+
+    <section id="skills" class="section-3d">
+        <h2>Skills</h2>
+        <ul>
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+
+    <section id="projects" class="section-3d">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title</h3>
+            <img src="project-image.jpg" alt="Project Image">
+            <p>Project Description</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="resume" class="section-3d">
+        <h2>Resume</h2>
+        <a href="your-resume.pdf" download>Download My Resume</a>
+    </section>
+
+    <section id="contact" class="section-3d">
+        <h2>Contact</h2>
+        <p><i class="fas fa-envelope icon"></i>Email: your-email@example.com</p>
+        <p><i class="fas fa-phone icon"></i>Phone: (123) 456-7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const aboutImage = document.querySelector('#about img');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeBtn = document.querySelector('.close');
+
+            aboutImage.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImage.src = aboutImage.src;
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
